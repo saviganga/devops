@@ -1,3 +1,7 @@
 vagrant/auto-start-vm/iaac/auto-provision-wordpress-website/wordpress.conf
 vagrant/auto-start-vm/iaac/auto-provision-website/.vagrant/
 vagrant/auto-start-vm/iaac/auto-provision-wordpress-website/.vagrant/
+vagrant/auto-start-vm/centos7/.vagrant/
+vagrant/auto-start-vm/ubuntu18/.vagrant/
+vagrant/auto-start-vm/website-wordpress/.vagrant/
+vagrant/auto-start-vm/wedding-website/.vagrant/
