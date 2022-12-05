@@ -1,0 +1,1 @@
+{"virtualbox":{"/opt/sync_data":{"guestpath":"/opt/sync_data","hostpath":"/home/saviganga/Documents/devops/vagrant/auto-start-vm/ubuntu18/sync_data","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/saviganga/Documents/devops/vagrant/auto-start-vm/ubuntu18","disabled":false,"__vagrantfile":true}}}
