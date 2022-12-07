@@ -9,3 +9,5 @@ vagrant/auto-start-vm/multiVM-mgt/.vagrant/
 vagrant/auto-start-vm/deployments/manual/java/.vagrant/
 VprofileProjectSetup.pdf
 vagrant-vms.zip
+vagrant/auto-start-vm/deployments/automated/java/application.properties/
+vagrant/auto-start-vm/deployments/manual/java/ubuntu-bionic-18.04-cloudimg-console.log

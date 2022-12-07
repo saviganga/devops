@@ -1,0 +1,25 @@
+#JDBC Configutation for Database Connection
+jdbc.driverClassName=
+jdbc.url=
+jdbc.username=
+jdbc.password=
+
+#Memcached Configuration For Active and StandBy Host
+#For Active Host
+memcached.active.host=
+memcached.active.port=
+#For StandBy Host
+memcached.standBy.host=
+memcached.standBy.port=
+
+#RabbitMq Configuration
+rabbitmq.address=
+rabbitmq.port=
+rabbitmq.username=
+rabbitmq.password=
+
+#Elasticesearch Configuration
+elasticsearch.host =
+elasticsearch.port =
+elasticsearch.cluster=
+elasticsearch.node=
