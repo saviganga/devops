@@ -723,4 +723,4 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCkH6f3mCVXX2XB5S3YKwxm41S5wMKlbNNrmGs6qGig
 [   24.499181] cloud-init[1531]: Cloud-init v. 21.1-19-gbad84ad4-0ubuntu1~16.04.2 running 'modules:final' at Wed, 07 Dec 2022 05:05:53 +0000. Up 24.10 seconds.
 [   24.499616] cloud-init[1531]: ci-info: no authorized SSH keys fingerprints found for user ubuntu.
 [   24.499908] cloud-init[1531]: Cloud-init v. 21.1-19-gbad84ad4-0ubuntu1~16.04.2 finished at Wed, 07 Dec 2022 05:05:54 +0000. Datasource DataSourceNoCloud [seed=/dev/sdb][dsmode=net].  Up 24.47 seconds
-
+[30366.441821] e1000 0000:00:03.0 enp0s3: Reset adapter

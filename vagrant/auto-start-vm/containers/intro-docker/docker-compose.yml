@@ -1,0 +1,42 @@
+version: "3.3"
+
+services:
+  tomcat:
+    build: ./tomcat
+    command: /usr/local/tomcat/bin/catalina.sh run
+    volumes:
+      - ./tomcat:/usr/src/app/tomcat
+    ports:
+      - "8080:8080"
+
+  nginx:
+    build: ./nginx
+    # command: /usr/local/tomcat/bin/catalina.sh run
+    volumes:
+      - ./nginx:/usr/src/app/nginx
+    ports:
+      - "80:80"
+    
+  mysql:
+    build: ./mysql
+    # command: /usr/local/tomcat/bin/catalina.sh run
+    volumes:
+      - ./mysql:/usr/src/app/mysql
+    ports:
+      - "2567:3306"
+  
+  memcache:
+    build: ./memcache
+    # command: /usr/local/tomcat/bin/catalina.sh run
+    volumes:
+      - ./memcache:/usr/src/app/memcache
+    # ports:
+    #   - "8080:80"
+
+  rabbitmq:
+    build: ./rabbitmq
+    # command: /usr/local/tomcat/bin/catalina.sh run
+    volumes:
+      - ./rabbitmq:/usr/src/app/rabbitmq
+    ports:
+      - "15672:15672"
