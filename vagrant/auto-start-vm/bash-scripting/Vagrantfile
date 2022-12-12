@@ -1,0 +1,104 @@
+Vagrant.configure("2") do |config|
+    # config.vm.provision "shell", inline: "echo Hello"
+    config.hostmanager.enabled = true 
+    config.hostmanager.manage_host = true
+  
+    ##########################################################################
+    # centos7 VM
+    config.vm.define "vm_centos" do |vm_centos|
+
+      # define operating system to run on vm  
+      vm_centos.vm.box = "geerlingguy/centos7"
+
+      vm_centos.vm.hostname = "vm-centos"
+
+
+      # set network configuration
+
+      # private ip
+      vm_centos.vm.network "private_network", ip: "192.168.56.70"
+      # public bridged network
+      vm_centos.vm.network "public_network"
+
+      # set up memory and cpu configuration
+      vm_centos.vm.provider "virtualbox" do |cb_c7|
+        cb_c7.memory = "1024"
+        cb_c7.cpus = 1
+      end  
+
+      # run provision command(s)
+      vm_centos.vm.provision "shell", inline: <<-SHELL
+        cat /etc/hosts
+        yum install vim -y
+        ip addr show
+      SHELL
+
+    end
+    ##########################################################################
+
+    
+    #############################################################################
+    # static website VM
+    config.vm.define "web_01" do |web_01|
+
+        # define operating system to run on vm  
+        web_01.vm.box = "geerlingguy/centos7"
+
+        web_01.vm.hostname = "web01"
+  
+        # set network configuration
+  
+        # private ip
+        web_01.vm.network "private_network", ip: "192.168.56.71"
+        # public bridged network
+        web_01.vm.network "public_network"
+  
+        # set up memory and cpu configuration
+        web_01.vm.provider "virtualbox" do |vb_st_web|
+          vb_st_web.memory = "1024"
+          vb_st_web.cpus = 1
+        end  
+
+        web_01.vm.provision "shell", inline: <<-SHELL
+            cat /etc/hosts
+            ip addr show
+
+        SHELL
+  
+    end
+    #################################################################################
+
+    
+    #############################################################################
+    # static website VM
+    config.vm.define "web_02" do |web_02|
+
+        # define operating system to run on vm  
+        web_02.vm.box = "geerlingguy/centos7"
+
+        web_02.vm.hostname = "web02"
+  
+        # set network configuration
+  
+        # private ip
+        web_02.vm.network "private_network", ip: "192.168.56.72"
+        # public bridged network
+        web_02.vm.network "public_network"
+  
+        # set up memory and cpu configuration
+        web_02.vm.provider "virtualbox" do |vb_st_web|
+          vb_st_web.memory = "1024"
+          vb_st_web.cpus = 1
+        end  
+
+        web_02.vm.provision "shell", inline: <<-SHELL
+            cat /etc/hosts
+            ip addr show
+
+        SHELL
+  
+    end
+    #################################################################################
+
+    
+  end

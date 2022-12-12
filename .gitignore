@@ -15,3 +15,5 @@ vagrant/auto-start-vm/deployments/automated/java/.vagrant/
 vagrant/auto-start-vm/containers/intro-docker/.vagrant/
 vagrant/auto-start-vm/containers/intro-microservices/.vagrant/
 emart_docker-compose.txt
+vagrant/auto-start-vm/bash-scripting/.vagrant/
+bash_scripts_DPC.zip
