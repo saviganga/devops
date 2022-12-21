@@ -1,0 +1,42 @@
+Vagrant.configure("2") do |config|
+  config.hostmanager.enabled = true 
+  config.hostmanager.manage_host = true
+  
+### box1 ####
+  config.vm.define "box1" do |box1|
+    box1.vm.box = "bytesguy/ubuntu-server-20.04-arm64"
+    box1.vm.box_version = "1.0.0"
+    box1.vm.hostname = "box1"
+    box1.vm.network "private_network", ip: "192.168.56.40"
+    # box1.vm.provision "shell", path: "mysql.sh"
+    box1.vm.provider "virtualbox" do |vb|
+     vb.memory = "1600"
+     vb.cpus = 2
+   end
+  end
+  
+### box2 #### 
+  config.vm.define "box2" do |box2|
+    box2.vm.box = "jacobw/fedora35-arm64"
+    box2.vm.hostname = "box2"
+    box2.vm.network "private_network", ip: "192.168.56.41"
+    # box2.vm.provision "shell", path: "memcache.sh"  
+    box2.vm.provider "virtualbox" do |vb|
+     vb.memory = "1600"
+     vb.cpus = 2
+   end
+  end
+  
+### RabbitMQ vm  ####
+  config.vm.define "box3" do |box3|
+    box3.vm.box = "jacobw/fedora35-arm64"
+  box3.vm.hostname = "box3"
+    box3.vm.network "private_network", ip: "192.168.56.42"
+    # box3.vm.provision "shell", path: "rabbitmq.sh"
+    box3.vm.provider "virtualbox" do |vb|
+     vb.memory = "1600"
+     vb.cpus = 2
+   end
+  end
+  
+end

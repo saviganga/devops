@@ -22,3 +22,5 @@ vagrant/auto-start-vm/mac/stvm/.vagrant/
 vagrant/.DS_Store
 vagrant/auto-start-vm/.DS_Store
 vagrant/auto-start-vm/auto-website/.vagrant/
+vagrant/auto-start-vm/bash2/auto-start-website/.vagrant/
+vagrant/auto-start-vm/bash2/remote-scripting/.vagrant/
